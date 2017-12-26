@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.techprimers.elastic</groupId>
-	<artifactId>spring-elastic-demo</artifactId>
+	<groupId>com.discover.harmony.elastic</groupId>
+	<artifactId>spring-elastic-catalog-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-elastic-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>spring-elastic-catalog-api</name>
+	<description>Catalog API</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -51,6 +51,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jna</groupId>
+			<artifactId>jna</artifactId>
+			<version>3.0.9</version>
 		</dependency>
 	</dependencies>
 
