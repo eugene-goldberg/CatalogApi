@@ -1,7 +1,7 @@
 package com.discover.harmony.elastic.resource;
 
-import com.discover.harmony.elastic.model.Users;
-import com.discover.harmony.elastic.repository.UsersRepository;
+import com.discover.harmony.elastic.model.BusinessMetadata;
+import com.discover.harmony.elastic.repository.BusinessMetadataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,26 +16,19 @@ import java.util.List;
 public class SearchResource {
 
     @Autowired
-    UsersRepository usersRepository;
+    BusinessMetadataRepository businessMetadataRepository;
 
     @GetMapping(value = "/name/{text}")
-    public List<Users> searchName(@PathVariable final String text) {
-        return usersRepository.findByName(text);
+    public List<BusinessMetadata> searchName(@PathVariable final String text) {
+        return businessMetadataRepository.findByName(text);
     }
-
-
-    @GetMapping(value = "/salary/{salary}")
-    public List<Users> searchSalary(@PathVariable final Long salary) {
-        return usersRepository.findBySalary(salary);
-    }
-
 
     @GetMapping(value = "/all")
-    public List<Users> searchAll() {
-        List<Users> usersList = new ArrayList<>();
-        Iterable<Users> userses = usersRepository.findAll();
-        userses.forEach(usersList::add);
-        return usersList;
+    public List<BusinessMetadata> searchAll() {
+        List<BusinessMetadata> businessMetadataList = new ArrayList<>();
+        Iterable<BusinessMetadata> businessMetadata = businessMetadataRepository.findAll();
+        businessMetadata.forEach(businessMetadataList::add);
+        return businessMetadataList;
     }
 
 
