@@ -26,7 +26,6 @@ public class Loaders {
 
         operations.putMapping(BusinessMetadata.class);
         System.out.println("Loading Data");
-        //businessMetadataRepository.deleteAll();
         businessMetadataRepository.save(getData());
         System.out.printf("Loading Completed");
 

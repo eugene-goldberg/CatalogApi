@@ -9,4 +9,5 @@ public interface BusinessMetadataRepository extends ElasticsearchRepository<Busi
     List<BusinessMetadata> findByName(String name);
 
     List<BusinessMetadata> findById(Long id);
+
 }
